@@ -15,21 +15,33 @@
 // a) Create a test with an expect statement using the variable provided.
 // HINT: Check out this resource: https://jestjs.io/docs/expect#expectarraycontainingarray
 
-const colors1 = ["purple", "blue", "green", "yellow", "pink"]
-// Expected output example (can be a different order): ["yellow", "blue", "pink", "green"]
-const colors2 = [
-  "chartreuse",
-  "indigo",
-  "periwinkle",
-  "ochre",
-  "aquamarine",
-  "saffron"
-]
-// Expected output example (can be a different order): ["saffron", "aquamarine", "periwinkle", "indigo", "ochre"]
+// test:
+// describe("shuffledColors", () => {
+//   it("removes the first item from the array and shuffles the remaining items.", () => {
+    const colors1 = ["purple", "blue", "green", "yellow", "pink"]
+    // Expected output example (can be a different order): ["yellow", "blue", "pink", "green"]
+    const colors2 = [
+      "chartreuse",
+      "indigo",
+      "periwinkle",
+      "ochre",
+      "aquamarine",
+      "saffron"
+    ]
+    // Expected output example (can be a different order): ["saffron", "aquamarine", "periwinkle", "indigo", "ochre"]
+//     expect(shuffledColors(colors1)).toEqual(expect.arrayContaining(expected))
+//     expect(shuffledColors(colors2)).toEqual(expect.arrayContaining(expected))
+//   })
+// })
+// // Good Failure: ReferenceError: shuffledColors is not defined
 
 // b) Create the function that makes the test pass.
 
 // Pseudo code:
+// function name: shuffledColors
+// input: an array of colors
+// output: the array minus the first item and then shuffled
+// process: create a function 
 
 // --------------------2) Create a function that takes in an object that contains up votes and down votes and returns the end tally.
 
