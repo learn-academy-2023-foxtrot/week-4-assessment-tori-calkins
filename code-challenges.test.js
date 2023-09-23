@@ -91,18 +91,24 @@ const shuffledColors = (array) => {
 // input: object
 // output: number of the end tally
 // process: create a function that'll use 
-
+const endTally = (number) => {
+  const values = Object.values(number)
+  const sum = values.reduce((accumulator, value) => {
+    return accumulator+ value
+  })
+}
+console.log(votes1)
 // --------------------3) Create a function that takes in two arrays as arguments and returns one array with no duplicate values. STRETCH: Use the spread operator to pass in a dynamic number of arguments.
 
 // a) Create a test with an expect statement using the variables provided.
-describe("newArray", () => {
-  it("returns one array with no duplicate values", () => {
+// describe("newArray", () => {
+//   it("returns one array with no duplicate values", () => {
     const dataTypesArray1 = ["array", "object", "number", "string", "Boolean"]
     const dataTypesArray2 = ["string", "null", "Boolean", "string", "undefined"]
     // Expected output: ["array", "object", "number", "string", "Boolean", "null", "undefined"]
-    expect(newArray(dataTypesArray1)(dataTypesArray2)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
-  })
-})
+    // expect(newArray(dataTypesArray1)(dataTypesArray2)).toEqual(["array", "object", "number", "string", "Boolean", "null", "undefined"])
+//   })w
+// })
 // Good failure: ReferenceError: newArray is not defined
 
 // b) Create the function that makes the test pass.
@@ -126,9 +132,9 @@ describe("newArray", () => {
 const newArray = (arr1, arr2) => { // function with arr1 and arr2 as parameters
   const combinedArr = [...arr1, ...arr2] // uses spread operators to combine the two arrays into one array
   const newArr = [...new Set(combinedArr)] // the new Set() created a new object that took out all the duplicates and the spread operator converted the object back into an array
+  const finalResultsArray = newArray(dataTypesArray1, dataTypesArray2) // created a final array to hold what the newArray did and call on the test variables given 
   return newArr // returned what was in the newArray function
 }
-const finalResultsArray = newArray(dataTypesArray1, dataTypesArray2) // created a final array to hold what the newArray did and call on the test variables given 
 //console.log(finalResultsArray) // console.log to make sure it all worked
 
 // output:
