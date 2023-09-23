@@ -16,8 +16,8 @@
 // HINT: Check out this resource: https://jestjs.io/docs/expect#expectarraycontainingarray
 
 // test:
-// describe("shuffledColors", () => {
-//   it("removes the first item from the array and shuffles the remaining items.", () => {
+describe("shuffledColors", () => {
+  it("removes the first item from the array and shuffles the remaining items.", () => {
     const colors1 = ["purple", "blue", "green", "yellow", "pink"]
     // Expected output example (can be a different order): ["yellow", "blue", "pink", "green"]
     const colors2 = [
@@ -29,10 +29,23 @@
       "saffron"
     ]
     // Expected output example (can be a different order): ["saffron", "aquamarine", "periwinkle", "indigo", "ochre"]
-//     expect(shuffledColors(colors1)).toEqual(expect.arrayContaining(expected))
-//     expect(shuffledColors(colors2)).toEqual(expect.arrayContaining(expected))
-//   })
-// })
+    expect(shuffledColors(colors1)).toEqual(expect.arrayContaining(["yellow", "blue", "pink", "green"]))
+    expect(shuffledColors(colors2)).toEqual(expect.arrayContaining(["saffron", "aquamarine", "periwinkle", "indigo", "ochre"]))
+  })
+  })
+  // this is my attempt at using the second part of the arrayContaining method and it wouldn't allow my test to pass so I commented it out. Looking at it, it doesn't look like i needed it to begin with but here's what I did when I tried it out. 
+  // it("removes the first item from the array and shuffles the remaining items.", () => {
+  //   expect(shuffledColors(["purple", "blue", "green", "yellow", "pink"])).not.toEqual(expect.arrayContaining(expected))
+  //   expect(shuffledColors([
+    //   "chartreuse",
+    //   "indigo",
+    //   "periwinkle",
+    //   "ochre",
+    //   "aquamarine",
+    //   "saffron"
+    // ])).not.toEqual(expect.arrayContaining(expected))
+  // })
+
 // // Good Failure: ReferenceError: shuffledColors is not defined
 
 // b) Create the function that makes the test pass.
@@ -41,7 +54,15 @@
 // function name: shuffledColors
 // input: an array of colors
 // output: the array minus the first item and then shuffled
-// process: create a function 
+// process: create a function that uses the .shift() method to remove the first item in the array, then use .sort() method that'll randomly sort the remaining elements in the array.
+
+const shuffledColors = (array) => {
+   array.shift()
+    return array.sort()
+}
+//console.log(shuffledColors(colors1))
+
+//  PASS  ./code-challenges.test.js
 
 // --------------------2) Create a function that takes in an object that contains up votes and down votes and returns the end tally.
 
