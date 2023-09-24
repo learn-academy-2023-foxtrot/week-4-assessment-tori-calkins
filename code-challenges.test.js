@@ -65,12 +65,6 @@ const shuffledColors = (array) => { // new function that takes in the parameter 
 //  PASS  ./code-challenges.test.js
 
 // --------------------2) Create a function that takes in an object that contains up votes and down votes and returns the end tally.
-// use 3rd question of last weeks assessment for help 
-// const accumSum = (array) => {
-//   let sum = 0 
-//   return array.map((value) => (sum += value)) /
-// }
-
 
 // a) Create a test with expect statements for each of the variables provided.
 describe("endTally", () => {
@@ -90,7 +84,7 @@ describe("endTally", () => {
 // function name: endTally
 // input: object
 // output: number of the end tally
-// process: create a function that'll use 
+// process: create a function and a new variable that'll use a conditional statement to do one of the statements if the answer is true and if it is, return the value of the conditional statement inside the new variable.
 
 const endTally = (obj) => { // new function that takes in the parameter of obj aka object
   let totalTally = 0 // created a new variable to hold the final values but gave it a value of 0 to use for the conditional statement
